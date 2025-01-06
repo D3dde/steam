@@ -5,7 +5,9 @@ import javafx.fxml.FXML;
 
 import steam.*;
 
-public class Player {
+public class PlayerSection {
+
+    private static Platform steam = App.steam;
 
     @FXML
     private void switchToPrimary() throws IOException {

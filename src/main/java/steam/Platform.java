@@ -14,4 +14,8 @@ public class Platform{
         games.add(game);
     }
 
+    public static boolean validateUser(User user){
+        return users.contains(user);
+    }
+
 }
