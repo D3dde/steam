@@ -15,7 +15,34 @@ public class Platform{
     }
 
     public static boolean validateUser(User user){
-        return users.contains(user);
+        for (int i = 0; i < users.size(); i++){
+            if (users.get(i).equals(user)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean exist(String username){
+        for (int i = 0; i<users.size() ; i++){
+            if (users.get(i).getUsername().equals(username)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static User getUser(int index){
+        return users.get(index);
+    }
+
+    public static int getIndex(String username){
+        for (int i = 0; i<users.size() ; i++){
+            if (users.get(i).getUsername().equals(username)){
+                return i;
+            }
+        }
+        return -1;
     }
 
 }

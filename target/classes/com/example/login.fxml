@@ -12,8 +12,8 @@
 <VBox alignment="CENTER" prefHeight="190.0" prefWidth="263.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Login">
    <children>
       <Label alignment="CENTER" prefHeight="16.0" prefWidth="141.0" text="Login - Sign up" />
-      <TextField fx:id="username" alignment="CENTER" maxWidth="-Infinity" prefHeight="24.0" prefWidth="215.0" promptText="username" />
-      <TextField fx:id="password" alignment="CENTER" maxWidth="-Infinity" prefHeight="24.0" prefWidth="215.0" promptText="password" />
+      <TextField fx:id="username" alignment="CENTER" maxWidth="-Infinity" prefWidth="215.0" promptText="username" />
+      <TextField fx:id="password" alignment="CENTER" maxWidth="-Infinity" prefWidth="215.0" promptText="password" />
       <Label fx:id="errors" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="16.0" prefWidth="77.0" />
       <HBox alignment="CENTER">
          <children>

@@ -46,4 +46,8 @@ public class Game {
     public int reviewsRate(){
         return (positiveReviews/(positiveReviews+negativeReviews))*100;
     }
+
+    public String toString(){
+        return "name: "+name+" - description: "+description+" - price: "+price+" - publisher: "+publisher;
+    }
 }

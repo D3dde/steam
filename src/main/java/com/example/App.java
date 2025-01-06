@@ -18,6 +18,7 @@ public class App extends Application {
     private static Scene scene;
 
     public static Platform steam;
+    public static int currentUser = -1;
 
     @Override
     public void start(Stage stage) throws IOException {

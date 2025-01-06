@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PlayerSection">
+<VBox prefHeight="242.0" prefWidth="354.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PlayerSection">
     <children>
-        <Label text="Secondary View" />
-        <Button fx:id="secondaryButton" text="Switch to Primary View" onAction="#switchToPrimary" />
+      <HBox>
+         <children>
+              <Label fx:id="user" text="username not found" />
+            <Separator orientation="VERTICAL" prefHeight="24.0" prefWidth="12.0" />
+            <Button onAction="#logOut" text="Log out" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <VBox prefHeight="158.0" prefWidth="200.0">
+               <children>
+                  <Label text="Library" />
+                  <TextArea prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="158.0" prefWidth="200.0">
+               <children>
+                  <Label text="Store" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
     </children>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

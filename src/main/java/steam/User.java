@@ -5,7 +5,6 @@ import java.util.regex.Pattern;
 
 public class User {
     protected static final String PASS_REGEX = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@.-_])(?=\\S+$).{8,}$";
-    protected static final String USER_REGEX = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@.-_])(?=\\S+$).{4,}$";
     protected String username;
     protected String password;
 
@@ -22,7 +21,7 @@ public class User {
     }
 
     public boolean setUsername(String username){
-        if (passwordValidator(username)){
+        if (usernameValidator(username)){
             this.username = username;
             return true;
         }else return false;
@@ -45,8 +44,17 @@ public class User {
         return matcher.matches();
     }
     public static boolean usernameValidator(String username){
-        Pattern pattern = Pattern.compile(USER_REGEX);
-        Matcher matcher = pattern.matcher(username);
-        return matcher.matches();
+        return username.length()>=4;
+    }
+
+    public String toString(){
+        return "username: "+username+" - password: "+password;
+    }
+
+    public boolean equals(Object o){
+        if (o instanceof User){
+            User u = (User) o;
+            return this.username.equals(u.username) && this.password.equals(u.password);
+        }else return false;
     }
 }
