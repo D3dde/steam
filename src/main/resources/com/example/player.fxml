@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
@@ -22,13 +23,16 @@
             <VBox prefHeight="158.0" prefWidth="200.0">
                <children>
                   <Label text="Library" />
-                  <TextArea prefHeight="200.0" prefWidth="200.0" />
+                  <TextArea fx:id="library" editable="false" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
             <Separator orientation="VERTICAL" prefHeight="200.0" />
             <VBox prefHeight="158.0" prefWidth="200.0">
                <children>
                   <Label text="Store" />
+                  <ComboBox fx:id="store" prefWidth="150.0" />
+                  <Label fx:id="errors" />
+                  <Button mnemonicParsing="false" onAction="#buyGame" text="Buy" />
                </children>
             </VBox>
          </children>

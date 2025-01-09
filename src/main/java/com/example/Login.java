@@ -41,7 +41,7 @@ public class Login {
                 }
             }
         }else{
-            errors.setText("Error: username or password unavailable");
+            errors.setText("Error: username or password too simple");
         }
     }
     @FXML
@@ -58,7 +58,7 @@ public class Login {
                     App.setRoot("player");
                 }
             } else {
-                errors.setText("Invalid username or password.");
+                errors.setText("Error: this user does not exist");
             }
         } else {
             errors.setText("Error: username or password unavailable");

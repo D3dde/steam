@@ -11,8 +11,27 @@ public class Player extends User{
         ownedGames = new ArrayList<Game>();
     }
 
-    public void buyGame(Game game){
-        ownedGames.add(game);
+    public boolean buyGame(Game game){
+        boolean isPresent = false;
+        for (int i = 0; i < ownedGames.size() ; i++){
+            if (game.equals(ownedGames.get(i))){
+                isPresent = true;
+            }
+        }
+        if (isPresent){
+            return false;
+        }else{
+            ownedGames.add(game);
+            return true;
+        }
+    }
+
+    public String getLibrary(){
+        String out = "";
+        for (int i = 0; i < ownedGames.size(); i++){
+            out+=ownedGames.get(i).toString()+"\n";
+        }
+        return out;
     }
 
 }

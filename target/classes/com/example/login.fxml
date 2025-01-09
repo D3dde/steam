@@ -14,7 +14,7 @@
       <Label alignment="CENTER" prefHeight="16.0" prefWidth="141.0" text="Login - Sign up" />
       <TextField fx:id="username" alignment="CENTER" maxWidth="-Infinity" prefWidth="215.0" promptText="username" />
       <TextField fx:id="password" alignment="CENTER" maxWidth="-Infinity" prefWidth="215.0" promptText="password" />
-      <Label fx:id="errors" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="16.0" prefWidth="77.0" />
+      <Label fx:id="errors" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefWidth="223.0" />
       <HBox alignment="CENTER">
          <children>
             <Button onAction="#login" text="Login" />

@@ -45,4 +45,25 @@ public class Platform{
         return -1;
     }
 
+    public static String[] getGames(){
+        String[] out = new String[games.size()];
+        for (int i = 0; i < games.size(); i++){
+            out[i] = games.get(i).toString();
+        }
+        return out;
+    }
+
+    public static int getGameIndex(String game){
+        for (int i = 0; i < games.size(); i++){
+            if (games.get(i).toString().equals(game)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static Game getGame(int index){
+        return games.get(index);
+    }
+
 }
