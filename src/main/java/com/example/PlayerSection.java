@@ -1,5 +1,7 @@
 package com.example;
 
+
+
 import java.io.IOException;
 
 import javafx.collections.FXCollections;
@@ -25,6 +27,9 @@ public class PlayerSection {
     private ComboBox<String> store;
 
     @FXML
+    private ComboBox<String> sort;
+
+    @FXML
     private Label user;
     
     @FXML
@@ -33,6 +38,8 @@ public class PlayerSection {
         ObservableList<String> items = FXCollections.observableArrayList(steam.getGames());
         store.setItems(items);
         library.setText(player.getLibrary());
+        String[] s = {"name","description","price"};
+        sort.setItems(FXCollections.observableArrayList(s));
     }
 
     @FXML
@@ -44,7 +51,6 @@ public class PlayerSection {
     protected void buyGame(){
         if (store.getValue() == null){
             errors.setText("Error: no item selected");
-            System.out.println(store.getValue());
         }else{
             if (steam.getGameIndex(store.getValue()) != -1){
                 if (player.buyGame(steam.getGame(steam.getGameIndex(store.getValue())))){
@@ -56,6 +62,14 @@ public class PlayerSection {
             }
         }
     }
+    @FXML
+    protected void sort(){
+        if (sort.getValue()!=null){
+            player.sortGames(sort.getValue());
+            reloadLibrary();
+        }
+    }
+
 
     @FXML
     protected void reloadLibrary(){

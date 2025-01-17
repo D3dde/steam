@@ -23,6 +23,12 @@
             <VBox prefHeight="158.0" prefWidth="200.0">
                <children>
                   <Label text="Library" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="sort" prefHeight="25.0" prefWidth="104.0" />
+                        <Button mnemonicParsing="false" onAction="#sort" prefHeight="25.0" prefWidth="56.0" text="sort" />
+                     </children>
+                  </HBox>
                   <TextArea fx:id="library" editable="false" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
